@@ -17,6 +17,7 @@ router.delete('/fridge/:fridgeId', fridge.deleteFridge);
 
 // Items Routes
 router.get('/items/:fridgeId', item.getAllItems);
+router.get('items/:fridgeId/:type', item.getItemByType);
 router.post('/items', item.addItem);
 router.patch('/items/:id', item.updateItem);
 router.delete('/items/:id', item.deleteItem);
@@ -24,5 +25,9 @@ router.delete('/items/:id', item.deleteItem);
 // Search Routes
 router.route('/search')
   .put(search.getRecipes);
+
+router.post('/uri/items', item.getItemUri);
+router.post('/nutrients', item.getNutrients);
+
 
 module.exports = router;

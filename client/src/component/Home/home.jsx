@@ -6,6 +6,7 @@ import { Form, Grid, Button } from 'semantic-ui-react';
 import Messages from '../Message/messagesListView.jsx';
 import Search from '../Search/searchListView.jsx';
 import Fridge from '../Fridge/fridgeView.jsx';
+import VoiceView from '../Voice/voiceView.jsx';
 import * as fridgeActions from '../../actions/fridgeActions.js';
 
 class Home extends Component {
@@ -28,6 +29,11 @@ class Home extends Component {
             <Grid.Row>
               <Fridge />
             </Grid.Row>
+            <br/>
+            <Grid.Row>
+              <VoiceView />
+            </Grid.Row>
+            <br/>
             <br/>
             <Grid.Row textAlign={'center'}>
               <Search />
