@@ -26,6 +26,7 @@ class itemAddition extends Component {
       item.quantity = qty.value;
       item.type = type;
       item.user = username;
+      console.log('Item obj: (nothing should be null) ', item)
       itemActions.addItem(item, fridge.id);
       name.value = '';
       qty.value = '';
@@ -66,6 +67,19 @@ class itemAddition extends Component {
 
     const item = {};
 
+    // if (annyang) {
+    //   // Let's define a command.
+    //   var commands = {
+    //     'hello': function() { handleSubmit(); alert('submitted') }
+    //   };
+    
+    //   // Add our commands to annyang
+    //   annyang.addCommands(commands);
+  
+    //   // Start listening.
+    //   annyang.start();
+    // }
+    console.log('TYPE: ', document.getElementById('inputType'))
     return (
       <Form 
         onSubmit={() => {
@@ -101,7 +115,8 @@ class itemAddition extends Component {
 const fridgeState = (store) => {
   return {
     fridge: store.fridge.fridge,
-    items: store.items.items
+    items: store.items.items,
+    itemPosted: store.items.posted
   }
 };
 

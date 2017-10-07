@@ -9,6 +9,7 @@ import Login from './Authorization/login.jsx';
 import LandingPage from './Landing_Page/landingPage.jsx';
 import SignUp from './Authorization/signup.jsx';
 import FixedMenu from './Landing_Page/fixedMenu.jsx';
+import VoiceView from './Voice/voiceView.jsx';
 import * as authActions from '../actions/authActions.js';
 
 class App extends Component {
@@ -17,18 +18,7 @@ class App extends Component {
   }
 
   render() {
-    if (annyang) {
-      // Let's define a command.
-      var commands = {
-        'hello': function() { alert('Hello world!'); }
-      };
-    
-      // Add our commands to annyang
-      annyang.addCommands(commands);
-  
-      // Start listening.
-      annyang.start();
-    }
+    console.log('THESE ARE PROPS IN APP: ', this.props)
     if(localStorage.getItem('userid')) {
       return (
         <HomeView history={this.props.history} />
