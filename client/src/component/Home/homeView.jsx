@@ -5,6 +5,8 @@ import { ConnectedRouter } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import {Button, Menu, Container, Image } from 'semantic-ui-react';
 
+import Dummy from '../Dummy/dummy.jsx';
+
 import Search from '../Search/searchView.jsx';
 import Home from '../Home/home.jsx';
 import * as authActions from '../../actions/authActions.js';

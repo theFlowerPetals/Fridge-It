@@ -7,6 +7,9 @@ import fridge from './fridgeReducers';
 import items from './itemReducers';
 import auth from './authReducers';
 import voice from './voiceReducers';
+import dummy from './dummyReducer';
+import mukbang from './mukbangReducer';
+
 
 const FridgeApp = combineReducers({
   auth,
@@ -15,6 +18,8 @@ const FridgeApp = combineReducers({
   fridge,
   items,
   voice,
+  dummy,
+  mukbang,
   routing: routerReducer,
 });
 

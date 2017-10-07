@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Form, Grid, Button } from 'semantic-ui-react';
-
+import Dummy from '../Dummy/dummy.jsx';
+import Mukbang from '../Mukbang/mukbang.jsx';
 import Messages from '../Message/messagesListView.jsx';
 import Search from '../Search/searchListView.jsx';
 import Fridge from '../Fridge/fridgeView.jsx';
@@ -28,6 +29,12 @@ class Home extends Component {
           <Grid.Column width={11}> 
             <Grid.Row>
               <Fridge />
+            </Grid.Row>
+            <Grid.Row>
+              <Dummy />
+            </Grid.Row>
+            <Grid.Row>
+              <Mukbang />
             </Grid.Row>
             <br/>
             <Grid.Row>
