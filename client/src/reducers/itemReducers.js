@@ -8,7 +8,9 @@ const initialState = {
   updated: false,
   deleting: false,
   deleted: false,
-  error: null
+  error: null,
+  uri: [],
+  nutrients: []
 }
 
 //reducer to change state for each action
@@ -82,6 +84,14 @@ const itemReducer = (state=initialState, action) => {
           return item.id === Number(action.payload.id) ? null : item;
         })
       })
+    }
+
+    case 'GET_NEW_URI_FULFILLED': {
+      return Object.assign({}, state, {uri: action.payload});
+    }
+
+    case 'GET_NUTRIENTS_FULFILLED': {
+      return Object.assign({}, state, {nutrients: action.payload});
     }
   }
   

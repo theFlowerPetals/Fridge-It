@@ -7,7 +7,7 @@ const temp = require('../../db/seed/recipeDummy.json');
 const search = {
   getRecipes: (req, res) => {
     let ingredients = req.body.data.ingredients;
-
+    console.log('THESE ARE INGREDIENTS: ', req.body.data.ingredients)
     // Implements example recipe data
     res.status(200).send(temp.data);
 

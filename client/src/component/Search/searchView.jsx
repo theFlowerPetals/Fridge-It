@@ -14,6 +14,19 @@ class SearchView extends Component {
   render() {
     let { actions, ingredients, recipeList } = this.props;
 
+    if (annyang) {
+      // Let's define a command.
+      var commands = {
+        'show recipes with *ingredients': getRecipes
+      };
+    
+      // Add our commands to annyang
+      annyang.addCommands(commands);
+  
+      // Start listening.
+      annyang.start();
+    }
+
     if(recipeList.length > 0) {
       return (
         <div>
